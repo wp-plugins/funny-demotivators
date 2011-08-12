@@ -1,0 +1,55 @@
+<?php
+
+/*
+
+ Below is sample page with demotivators - !!! USE THIS ONLY IF YOU WANT GENERATE AND EDIT YOUR ONW PAGE FOR YOUR THEME  !!!
+ I'm add this sample site because in some bad themes plugin can't generate good lookin page or show too many comments so you can make new simple page with demotivators
+
+ Instruction 
+
+1) Change name and type this file from sample_page.txt -> demotivators.php and write in main wordpress catalog
+
+
+
+2) Now you have page with demotivators www.your_site.com/demotivators.php , for let users find demotivators in your blog  in admin profil  you add  link to file
+demotivtors.php . After generate your own page you can disable funny demotivators plugin and use widget in your site without plugin.
+
+
+Edid html and css below
+*/
+
+
+define('WP_USE_THEMES', false);
+require('wp-blog-header.php');
+get_header();
+get_sidebar();
+        
+?>
+          <style type="text/css">			  
+				
+				   .random_demotivator{
+				                 margin-top:20px;
+				   }
+				   #big_font{
+				                 font-size:19px; 
+						             margin-top:30px;
+				   }
+				   .demotivators_image{				          	
+		                   -moz-border-radius:5px;
+		                   -webkit-border-radius:5px;
+		                    border-radius:10px;
+						            margin:0 auto;		
+							          border-size:0px;     							       
+				     }
+          .demotivators_image:hover{
+						           box-shadow: 0 4px 9px #000000;						  
+					}						   
+				
+           	</style>				
+ <?php
+ 
+echo @file_get_contents('http://demotivators.us/widget/8_%20big_demotivators.php');
+
+get_footer();
+
+?>
